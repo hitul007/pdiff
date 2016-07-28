@@ -83,9 +83,9 @@ def compare_package_version(installed_pkg, requirement_pkg):
     requirement_pkg_v = pkg_tuple(requirement_pkg_v)
     installed_pkg_v = pkg_tuple(installed_pkg_v)
 
-    if ">" in requirement_pkg:
-        return requirement_pkg_v > installed_pkg_v
-    elif ">=" in requirement_pkg:
+    if ">=" in requirement_pkg:
+        return requirement_pkg_v >= installed_pkg_v
+    elif ">" in requirement_pkg:
         return requirement_pkg_v >= installed_pkg_v
     elif "<" in requirement_pkg:
         return requirement_pkg_v < installed_pkg_v
